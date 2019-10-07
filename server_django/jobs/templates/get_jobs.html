@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>
+            Joogle, Inc
+        </title>
+    </head>
+    <body>
+        <h1>Joogle, Inc</h1>
+        <ul>
+                    {% for job in jobs %}
+                    <li>
+                            {{job}}
+                    </li>
+                    {% endfor %}
+        </ul>
+    </body>
+    </html>

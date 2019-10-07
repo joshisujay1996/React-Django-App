@@ -1,0 +1,26 @@
+For Jobs
+
+1. To view Jobs (GET)
+    /jobs/view
+
+2. To post Jobs (POST)
+    /jobs/post
+                TO POST (id's)
+                    jobid
+                    jobtitle
+                    jobdescription
+
+------------------------------------------------------------------------
+
+For Candidates
+
+1. To View Candidates
+    /candidates/view
+
+2. To apply for Job
+    /candidates/post
+            TO POST (id's required)
+                jobid
+                jobtitle
+                email
+                name

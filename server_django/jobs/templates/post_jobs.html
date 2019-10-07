@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Joogle, Inc
+        </title>
+
+    </head>
+    <body>
+        <h1>Joogle, Inc</h1>
+       
+       <div>
+           <!-- Here in the form action you are calling  -->
+           <form class = "postJobs" action= "{% url 'postJobs' %}" method = "POST">
+            {% csrf_token %}
+            <label for="jobid">Job ID</label>
+                <input type="number" name="jobid" id="jobid" placeholder="Job ID" required>
+                <label for="jobtitle" id = "test">Job Title</label>
+                <input type="text" name="jobtitle" id="jobtitle" placeholder="Job Title" required>
+                <label for="jobDescription">Job Description</label>
+                <textarea id="jobdescription" name="jobdescription" rows="4" required></textarea>
+                <input onclick = "submit_function()" type="submit" value="Create"/>
+        </form>
+       </div>
+       <script>
+
+           let submit_function = function(){
+               let jb_id = document.getElementById('jobid');
+               let jb_title = document.getElementById('jobtitle');
+               let jb_dis = document.getElementById('jobdescription');
+               console.log(jb_id)
+               if (jb_id.length != 10) {
+                    alert("jobid must be 10 digit")
+               }
+
+           }
+
+        </script>
+    </body>
+    </html>
